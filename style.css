@@ -83,3 +83,33 @@ footer {
     margin-top: 50px;
     border-top: 1px solid #334155;
 }
+
+
+/* --- 7. Mode Clair (Activé via JS) --- */
+body.light-mode {
+    --bg-color: #ffffff;       /* Fond blanc */
+    --card-bg: #f1f5f9;        /* Gris très très clair pour les cartes */
+    --text-main: #1e293b;      /* Texte foncé */
+    --text-secondary: #64748b; /* Gris moyen */
+    --accent: #0284c7;         /* Bleu un peu plus sombre pour le contraste */
+}
+
+/* Petit style pour le bouton qu'on va créer */
+#theme-toggle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--accent);
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.2s;
+}
+
+#theme-toggle:hover {
+    transform: scale(1.1); /* Grossit un peu au survol */
+}
