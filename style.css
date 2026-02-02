@@ -1,0 +1,85 @@
+/* --- 1. Variables (Pour changer les couleurs facilement) --- */
+:root {
+    --bg-color: #0f172a;      /* Bleu nuit très sombre */
+    --card-bg: #1e293b;       /* Bleu un peu plus clair */
+    --text-main: #f8fafc;     /* Blanc cassé */
+    --text-secondary: #94a3b8;/* Gris clair */
+    --accent: #38bdf8;        /* Bleu cyan pour les liens/boutons */
+}
+
+/* --- 2. Base --- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+a { color: var(--accent); text-decoration: none; font-weight: bold; }
+a:hover { text-decoration: underline; }
+
+/* --- 3. Navigation (FLEXBOX) --- */
+/* Flexbox sert à aligner des éléments sur une ligne ou une colonne */
+header {
+    background-color: var(--card-bg);
+    padding: 1rem 0;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;             /* Active Flexbox */
+    justify-content: center;   /* Centre les éléments horizontalement */
+    gap: 30px;                 /* Espace entre les liens */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* --- 4. Section Héros --- */
+#accueil {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+#accueil h1 { font-size: 3rem; margin-bottom: 10px; }
+#accueil p { font-size: 1.2rem; color: var(--text-secondary); }
+
+/* --- 5. Grille de Projets (CSS GRID) --- */
+/* Grid est parfait pour créer des grilles 2D (lignes et colonnes) */
+#projets {
+    max-width: 1000px;
+    margin: 0 auto; /* Centre le bloc */
+    padding: 40px 20px;
+}
+
+.grid-container {
+    display: grid;
+    /* Magie : crée autant de colonnes que possible, minimum 280px de large */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background-color: var(--card-bg);
+    padding: 20px;
+    border-radius: 12px;       /* Coins arrondis */
+    border: 1px solid #334155;
+    transition: transform 0.2s; /* Animation fluide */
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Monte un peu au survol */
+    border-color: var(--accent);
+}
+
+/* --- 6. Footer --- */
+footer {
+    text-align: center;
+    padding: 2rem;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    margin-top: 50px;
+    border-top: 1px solid #334155;
+}
