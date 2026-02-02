@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio de Amine | etudiant ingenieur</title>
+    <title>Portfolio de Amine | étudiant ingenieur</title>
 
 <link rel="stylesheet" href="style.css">
 
@@ -16,12 +16,13 @@
                 <li><a href="#accueil">Accueil</a></li>
                 <li><a href="#projets">Projets</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><a href="#contacts">Contacts</a></li>
             </ul>
         </nav>
     </header>
 
     <section id="accueil">
-        <h1>Bonjour, je suis Amine 👋</h1>
+        <h1>Bonjour, je suis Amine !</h1>
         <p>Je suis étudiant ingénieur en informatique à l'ENSSAT (École Nationale Supérieure des Sciences Appliquées et de Technologie de Lannion).</p>
         <p>Voici mon portfolio en développement.</p>
     </section>
@@ -36,15 +37,15 @@
             </div>
             
             <div class="card">
-                <h3>☕ App Gestion Java</h3>
-                <p>Une application console pour gérer un stock de produits.</p>
-                <p><small>Technos : Java, POO</small></p>
+                <h3>☕ IA Snake</h3>
+                <p>Développement d'une IA pour le jeu Snake en C.</p>
+                <p><small>Technos : C, Algorithmique</small></p>
             </div>
 
             <div class="card">
-                <h3>🐍 Script Python</h3> 
-                <p>Automatisation de tâches de fichiers.</p>
-                <p><small>Technos : Python</small></p>
+                <h3>TIPE 2025</h3> 
+                <p>Techniques de refroidissement de composants électroniques.</p>
+                <p><small>Technos : Recherche, Expérimentation</small></p>
             </div>
         </div>
     </section>
@@ -60,6 +61,35 @@
     <footer>
         <p>&copy; 2026 Amine. Fait avec passion.</p>
     </footer>
+
+    <section id="backend-status" style="text-align: center; margin-top: 20px;">
+        <h2>État du Serveur Java</h2>
+        <p>J'essaie de contacter le serveur...</p>
+        <h3 id="api-message" style="color: var(--accent);">En attente...</h3>
+    </section>
+
+    <section id="contacts">
+        <h2>Me contacter</h2>
+        <form id="formulaire-contact">
+            <div style="margin-bottom: 10px;">
+                <label for="nom">Nom :</label><br>
+                <input type="text" id="nom" required style="width: 100%; padding: 8px;">
+            </div>
+            
+            <div style="margin-bottom: 10px;">
+                <label for="email">Email :</label><br>
+                <input type="email" id="email" required style="width: 100%; padding: 8px;">
+            </div>
+
+            <div style="margin-bottom: 10px;">
+                <label for="message">Message :</label><br>
+                <textarea id="message" rows="4" required style="width: 100%; padding: 8px;"></textarea>
+            </div>
+
+            <button type="submit" style="padding: 10px 20px; cursor: pointer;">Envoyer</button>
+        </form>
+        <p id="reponse-serveur" style="margin-top: 10px; font-weight: bold;"></p>
+    </section>
 
 <button id="theme-toggle" aria-label="Changer le thème">☀️</button>
 <script src="script.js"></script>
