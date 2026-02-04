@@ -113,3 +113,11 @@ body.light-mode {
 #theme-toggle:hover {
     transform: scale(1.1); /* Grossit un peu au survol */
 }
+
+/* --- 8. Style pour les Iframe (Google Slides / YouTube) --- */
+.slides-container iframe {
+    width: 100%;            /* Prend toute la largeur de la carte */
+    aspect-ratio: 16 / 9;   /* Garde le format rectangulaire standard */
+    border-radius: 8px;     /* Arrondit un peu les coins */
+    border: none;           /* Enlève la bordure moche par défaut */
+}
